@@ -1,0 +1,46 @@
+<!--pages/user/user.wxml-->
+
+<!--header-->
+<view class="user-header">
+ <view class="user-img">
+       <view class="iconfont icon-weixin" style="font-size:35px;"></view>
+ </view>
+  <view class="login-btn" bindtap="loginFun">微信授权登录</view>
+ </view>
+
+ <view class="user-article">
+   <view class="weui-cells weui-cells_after-title" style="font-size:13px;">
+      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+         <view class="weui-cell__bd">订单详情</view>
+         <view class="weui-cell__ft weui-cell__ft_in-access">查看</view>
+      </navigator>
+   </view>
+
+   <view class="order-class">
+     <navigator class="item-order">
+       <view class="iconfont icon-group"></view>
+       <text>待成团</text>
+     </navigator>
+
+     <navigator  class="item-order">
+       <view class="iconfont icon-pay"></view>
+       <text>待付款</text>
+     </navigator>
+
+     <navigator  class="item-order">
+       <view class="iconfont icon-send"></view>
+       <text>待发货</text>
+     </navigator>
+
+     <navigator  class="item-order">
+       <view class="iconfont icon-deliver"></view>
+       <text>待收货</text>
+     </navigator>
+
+     <navigator  class="item-order">
+       <view class="iconfont icon-complete"></view>
+       <text>已完成</text>
+     </navigator>
+
+   </view>
+ </view>

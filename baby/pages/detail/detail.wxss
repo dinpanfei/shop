@@ -1,0 +1,173 @@
+/* pages/detail/detail.wxss */
+page
+{
+    font-family: 微软雅黑;
+    background: #ccc;
+}
+/*swiper*/
+.swiper
+{
+    width:100%;
+    height:auto;
+    background: white; 
+}
+.swiper-title
+{
+  margin: 15rpx 30rpx;  
+}
+/*文本块*/
+.conten-text
+{
+  background: #ccc;
+  padding: 30rpx;  
+  font-size:12px;
+  position: relative;
+  margin-top:10rpx;
+}
+.sanjiaoxing
+{
+    
+    width:20px;
+    height:20px;
+    background: #ccc; 
+    transform:rotate(45deg);
+    position: absolute;
+    top:-5px;
+    left:44px;
+}
+
+/*拼团玩法*/
+.group-play-box
+{
+    width: 100%;
+    height: auto;
+    background: white;
+}
+.title-box
+{
+  width: 95%;
+  height: 100rpx; 
+  line-height: 100rpx; 
+  margin-left:25rpx;
+  border-bottom:1px solid #ccc;
+  font-size:14px;
+}
+.group-content
+{
+  width: 100%;
+}
+.group-play-img{
+width:80rpx;
+height:80rpx;
+border:1px solid red;
+border-radius: 50%;
+float:left;
+margin-top:47rpx;
+margin-right:10rpx;
+background:firebrick;
+}
+.group-play-img2{
+width:50rpx;
+height:50rpx;
+border:1px solid red;
+border-radius: 50%;
+float:left;
+margin-top:36rpx;
+margin-right:10rpx;
+background:firebrick;
+}
+.text-box
+{
+    margin-top:36rpx;
+    margin-left:10rpx;
+}
+.group-content text
+{
+ font-size: 14px;
+ float: left;
+}
+.group-item-left
+{
+ width: 33%;
+ display: inline-block;
+ margin:0 3rpx;
+ height: 173rpx;
+ text-align: center;
+}
+.group-item-center
+{
+  width: 32%;
+  height: 173rpx;
+  display: inline-block;
+ 
+  margin:0 3rpx;
+}
+.group-item-right
+{
+width: 33%;
+height: 173rpx;
+display: inline-block;
+}
+
+/**开团并邀请好友参团，24小时内人数不足自动退款*/
+.fight-group-title
+{
+    color:red;
+    font-size: 12px;
+    width: 100%;
+    height: 86rpx;
+    text-align: center;
+    line-height: 80rpx;
+    background: transparent;
+}
+
+/*懒人凑团挤一挤*/
+.group-coutuan-box
+{
+    width: 100%;
+    background: white;
+}
+.group-coutuan-content
+{
+    width: 100%;
+    /*position: fixed;*/
+}
+.weui-cell__bd
+{
+  font-size: 14px; 
+}
+.weui-text-box
+{
+  font-size:12px; 
+  color:#ccc; 
+}
+.weui-cell__ft
+{
+   width:101rpx; height: 63rpx;
+   border:1px solid red;
+   text-align: center;
+   line-height: 63rpx;
+   border-radius: 8rpx;
+   font-size: 13px;
+   color:red;
+}
+
+/*商品描述*/
+.commodity-detail
+{
+    width: 100%;
+    background: white;
+    margin-top:50rpx;
+}
+.text-box2
+{
+
+  border:1px solid black;  
+  height: 77px;
+  text-align: center;
+  line-height: 77px;
+}
+.group-play-img2
+{
+    border:1px solid red;
+}

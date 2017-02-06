@@ -1,0 +1,64 @@
+<!--index.wxml-->
+
+<!--顶部轮播图-->
+<swiper indicator-dots="true" style="height:350rpx;"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+  <block wx:for="{{bannerImages}}">
+    <swiper-item>
+      <image src="{{item.imgUrl}}" class="slide-image" style="width:100%;height:100%;"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!--四个模块导航-->
+<view class="module-box">
+     <navigator class="item-left">
+      <image src="{{moudleImages[0]}}"/>
+     </navigator>
+     <view class="item-right">
+      <navigator class="right-top">
+        <image src="{{moudleImages[1]}}"/>
+      </navigator>
+      <view class="right-bottom">
+         <navigator class="right-bottom-left">
+        <image src="{{moudleImages[2]}}"/>
+         </navigator>
+         <navigator class="right-bottom-right">
+        <image src="{{moudleImages[3]}}"/>
+         </navigator>
+      </view>
+     </view>
+</view>
+
+<!--导航栏-->
+<view class="navbar-box">
+   <scroll-view class="navbar scroll-view_H {{fixex?fixed:''}}" scroll-x="true" scroll-left="10">
+    <navigator url="" wx:for="{{scrollNavbar}}" wx:key="" class="navbar-list {{currentIndex==item.tabIndex ? 'on':''}}" data-ti="{{item.tabIndex}}" data-fi="{{item.category}}" data-tabIndex="{{item.tabIndex}}" data-category="{{item.category}}" bindtap="navLink">
+       {{item.text}}
+    </navigator>
+   </scroll-view> 
+</view>
+
+
+<!--商品列表展示-->
+ 
+  <navigator wx:for="{{lst}}" wx:key="" url="../detail/detail" class="navigator">
+    <view class="commodity-list">
+         <view class="commodity-image"> 
+                <image src="{{item.goods_img}}"/>
+         </view>
+         <view class="commodity-text">   
+            <view class="commodity-list-title">{{item.goods_title}}</view>
+            <view wx:if="{{!item.goods_promote_info==''}}" class="ems">{{item.goods_promote_info}}</view>
+            <view style="text-decoration:line-through;color:#ccc;font-size: 14px">原价:￥{{item.goods_cur_price}}</view>
+            <view style="color:firebrick;font-size: 16px;float:left;">团购:￥{{item.goods_group_price}}</view>
+            <view class="group-box">{{item.goods_group_size}}人团</view>  
+         </view>  
+    </view>
+  </navigator> 
+
+
+
+
+
+

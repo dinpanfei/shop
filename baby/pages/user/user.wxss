@@ -1,0 +1,92 @@
+/* pages/user/user.wxss */
+page
+{
+    font-family: 微软雅黑;
+}
+.user-header
+{
+    width: 100%;
+    height: 365rpx;
+    background:linear-gradient(to right bottom,#ccc,black);
+    position: relative;
+}
+.user-article
+{
+    background: white;
+    font-size:13px;
+}
+.user-img
+{
+  width: 125rpx;
+  height: 125rpx;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 125rpx;
+  background: white;
+  border:1px solid #fff;  
+  position: absolute;
+  top:50rpx;
+  left: 300rpx;
+}
+.weixin-img
+{
+  width:100%;  
+  height: 100%;
+  background: url(../../images/weixin.png);
+  background-size: cover;
+}
+.login-btn
+{
+  width:245rpx;
+  height:90rpx;
+  text-align: center;
+  line-height: 90rpx;
+  border:1px solid #fff; 
+  border-radius:8rpx;
+  color:#fff;
+  position: absolute;
+  top:205rpx;
+  left: 254rpx;
+}
+
+.user-order
+{
+  width: 100%;
+  height:100rpx;  
+  border-bottom:1px solid #ccc;
+  line-height: 100rpx;
+}
+.user-all
+{
+    float: left;
+    margin-left:20rpx;
+}
+.user-look
+{
+  
+   border:1px solid red;
+   margin-right:56rpx;
+   float: right;
+   color:#ccc;
+}
+.order-class
+{
+   width:100%;
+   white-space: nowrap;
+}
+.item-order
+{
+  width: 19%;
+  height: 170rpx;  
+  color:#ccc;
+  display: inline-block;
+  margin:0 3rpx;
+  text-align: center;
+  lighting-color: 170rpx;
+  border:1px solid #fff;
+}
+.iconfont
+{
+ font-size:25px;   
+ color:#ccc;
+}

@@ -1,0 +1,115 @@
+<!--pages/detail/detail.wxml-->
+<view class="swiper">
+<swiper indicator-dots="true" style="height:270px;"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+  <block wx:for="{{goods.bannerImages}}">
+    <swiper-item>
+      <image src="{{item}}" style="width:100%;height:100%;"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="swiper-title">{{goods.title}}</view>
+<view class="swiper-title">
+  <text style="color:red;">{{goods.group}}人团</text>
+   <text style="color:red;">￥{{goods.groupPrice}}</text>
+   <text style="text-decoration:line-through;color:#ccc;font-size: 14px;margin-left:26rpx;">原价:{{goods.groupPrice}}</text>
+   <text style="color:#ccc;font-size: 14px;margin-left:66px;">快递:包邮</text>
+</view>
+</view>
+
+<!--文本块-->
+<view class="conten-text">
+  <view class="sanjiaoxing"></view>
+    {{goods.detailText}}
+</view>
+
+<!--拼团玩法-->
+<view class="group-play-box">
+  <view class="title-box">拼团玩法</view>
+  <view class="group-content">
+
+  <view class="group-item-left">
+     <view class="group-play-img"></view>
+     <view class="text-box">
+      <text>付款开团{{'\n'}}</text>
+      <text>或参团</text>
+     </view>
+    </view>
+ <view class="group-item-center">
+     <view class="group-play-img"></view>
+     <view class="text-box">
+      <text>付款开团{{'\n'}}</text>
+      <text>或参团</text>
+     </view>
+    </view>
+ <view class="group-item-right">
+     <view class="group-play-img"></view>
+     <view class="text-box">
+      <text>付款开团{{'\n'}}</text>
+      <text>或参团</text>
+     </view>
+    </view>
+  </view>
+</view>
+
+<view class="fight-group-title">*开团并邀请好友参团，24小时内人数不足自动退款</view>
+
+<!--大家来凑团-->
+<block wx:if="{{group}}">
+<view class="group-coutuan-box"> 
+  <view class="title-box">懒人凑团挤一挤</view>
+   <view class="group-coutuan-content">
+      <navigator wx:for="{{group}}" url="">
+        <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <image src="{{item.userImg}}" style="margin-right: 5px;vertical-align: middle;width:40px; height: 40px;"></image>
+                </view>
+                <view class="weui-cell__bd">
+                  <view>{{item.userName+'\n'}}</view>
+                  
+                    <view class="weui-text-box"><text>剩余</text><text style="color:red;">{{item.endTime}}</text><text>结束</text>
+                    <text style="margin-left:12rpx;">仅差{{item.gap}}人</text></view>
+                </view>
+                <view class="weui-cell__ft">参团</view>
+        </view>
+      </navigator>
+   </view>
+</view>
+</block>
+
+
+<!--商品描述-->
+<view class="commodity-detail">
+  <view class="title-box">商品描述</view>
+  <view class="conten-text" style="background: white;">{{goods.detailText}}</view>
+     <view class="group-content">
+
+  <view class="group-item-left" style="height:35px;">
+     <view class="group-play-img2"></view>
+      <text class="text-box">拼团享优惠</text>
+     
+    </view>
+ <view class="group-item-center" style="height:35px;">
+     <view class="group-play-img2"></view>
+      <text class="text-box">全网最低价</text>
+    
+   
+    </view>
+ <view class="group-item-right" style="height:35px;">
+     <view class="group-play-img2"></view>
+      <text class="text-box">商品包退换</text>
+    </view>
+  </view>
+
+ <view class="conten-text">爱拼宝宝与平台内商家达成多人拼团享优惠价模式，由商家统一发货。收到商品如发现由任何质量问题，可联系爱拼宝宝客服进行退换。添加方式扫描下方客服二维码，加客服为微信好友说明情况，或关注爱拼宝宝公众号询问
+ </view>
+
+  <view style="color:#ccc;font-size:14px;margin-left:25rpx;margin-bottom: 25rpx;">默认包邮政、汇通快递</view>
+  <block wx:for="{{goods.detailImg}}">
+    <view style="margin-top:-6px;">
+   <image src="{{item}}" style="width: 100%;"/></view>
+  </block>
+</view> 
+
+
+
